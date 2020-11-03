@@ -8,6 +8,7 @@ class KubernetesCliAT1188 < Formula
   head "https://github.com/kubernetes/kubernetes.git"
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles"
     cellar :any_skip_relocation
     sha256 "6f93ab2c3883f480dbdc0e45e88f3e558ab0c9ffaeb58e906d69a39a4d381f27" => :catalina
     sha256 "cd1c01158cf241b07f0e4875acf151099fabf44b5c55e7b33b457a9eb0fefcfe" => :mojave
