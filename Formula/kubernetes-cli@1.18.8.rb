@@ -1,15 +1,17 @@
-class KubernetesCliAT1193 < Formula
+class KubernetesCli < Formula
   desc "Kubernetes command-line interface"
   homepage "https://kubernetes.io/"
   url "https://github.com/kubernetes/kubernetes.git",
-      tag:      "v1.19.3",
-      revision: "1e11e4a2108024935ecfcb2912226cedeafd99df"
+      tag:      "v1.18.8",
+      revision: "9f2892aab98fe339f3bd70e3c470144299398ace"
   license "Apache-2.0"
   head "https://github.com/kubernetes/kubernetes.git"
 
-  livecheck do
-    url :head
-    regex(/^v([\d.]+)$/i)
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "6f93ab2c3883f480dbdc0e45e88f3e558ab0c9ffaeb58e906d69a39a4d381f27" => :catalina
+    sha256 "cd1c01158cf241b07f0e4875acf151099fabf44b5c55e7b33b457a9eb0fefcfe" => :mojave
+    sha256 "a86b0894d94dbb51d75efec1dc2781cd83d657a9c7ad2bb65b7ad24971339f0d" => :high_sierra
   end
 
   depends_on "go" => :build
