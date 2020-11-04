@@ -1,4 +1,4 @@
-class KubernetesCliAt1143 < Formula
+class KubernetesCliAT1143 < Formula
   desc "Kubernetes command-line interface"
   homepage "https://kubernetes.io/"
   url "https://github.com/kubernetes/kubernetes.git",
@@ -19,7 +19,7 @@ class KubernetesCliAt1143 < Formula
   def name
     "kubernetes-cli"
   end
-  
+
   def install
     ENV["GOPATH"] = buildpath
     dir = buildpath/"src/k8s.io/kubernetes"
